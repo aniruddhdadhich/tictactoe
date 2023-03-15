@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: whitesmoke;
+}
+
+nav {
+  background-color: rgb(80, 13, 124);
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  padding: 10px;
+  justify-content: center;
+  letter-spacing: 6px;
+  color: white;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
+}
+nav ul {
+  list-style-type: none;
+}
+.gameContainer {
+  /* background-color: cadetblue; */
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  font-size: 6vw;
+  cursor: pointer;
+}
+
+.box:hover {
+  background-color: rgb(226, 203, 246);
+}
+
+.gameinfobox {
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gameinfo {
+  padding: 8px 34px;
+}
+.gameinfo h1 {
+  display: inline-block;
+  text-align: center;
+}
+
+.info {
+  font-size: 16px;
+  transition: font-size 1s ease-in-out;
+}
+.imgbox {
+  margin-top: 25px;
+}
+.imgbox img {
+  border-radius: 6px;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.br-0 {
+  border-right: 0;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+
+#reset {
+  background-color: rgb(189, 159, 216);
+  color: white;
+  border-radius: 6px;
+  margin: 0 23px;
+  padding: 1px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+#reset:hover {
+  background-color: rgb(133, 61, 200);
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 900px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+  .gameinfo {
+    margin-top: 34px;
+  }
+  .gameinfo h1 {
+    font-size: 1.5rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 20vw);
+  }
+}
